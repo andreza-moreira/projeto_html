@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilização do HEADER*/
+header {
+    background-color: rgb(255, 174, 0);
+}
+
+/* ESTILIZAÇÃO DE TITULOS */
+.titulos {
+    text-align: center;
+    color: navy;
+}
+
+/*Estilização do LOGO*/
+.logo {
+    width: 25%;
+    padding: 10px 0 20px 3%
+        /*padding-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 20px;*/
+}
+
+/*Estilização da Imagem 1*/
+.imagem1 {
+    width: 100%;
+    height: 35%;
+    object-fit: cover;
+    margin: 0;
+}
+
+/*Estilização do MENU*/
+nav {
+    color: white;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    font-size: 30px;
+    font-family: cursive;
+}
+
+/*nav em li*/
+nav li {
+    display: inline;
+    margin-right: 40px;
+}
+
+.divHeader {
+    position: relative;
+}
+
+/* Estilização da Sessão SOBRE NÓS */
+.sobre_nos {
+    width: 60%;
+    text-align: justify;
+    line-height: 1.5;
+    /* espaçamento entre linhas */
+    margin-left: 20%;
+    font-family: cursive;
+}
+
+.img_sobre_nos {
+    width: 40%;
+    float: left;
+    margin-right: 20px;
+    /* distanciando a imagem do texto */
+}
+
+.titulo_sobre_nos {
+    clear: left;
+}
+
+/* ESTILIZAÇÃO DA SESSÃO NOSSO ESTABELECIMENTO */
+.mapa{
+    text-align: center; 
+    background: linear-gradient(#FFFFFF, #f1e0d4);
+}
+
+/* Estilização da Sessão NOSSOS PRODUTOS */
+.nossos_produtos {
+    width: 60%;
+    text-align: justify;
+    line-height: 1.5;
+    /* espaçamento entre linhas */
+    margin-left: 20%;
+    font-family: cursive;
+}
