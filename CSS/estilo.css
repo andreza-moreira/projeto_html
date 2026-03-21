@@ -1,11 +1,13 @@
 body {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(#FFFFFF, #f1e0d4);
 }
 
 /* Estilização do HEADER*/
 header {
-    background-color: rgb(255, 174, 0);
+    background-color: rgb(250, 185, 46);
+    
 }
 
 /* ESTILIZAÇÃO DE TITULOS */
@@ -26,9 +28,19 @@ header {
 /*Estilização da Imagem 1*/
 .imagem1 {
     width: 100%;
-    height: 35%;
+    height: 30%;
     object-fit: cover;
     margin: 0;
+}
+
+/*Estilização da Imagem 2*/
+.imagem2 {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Ajuste o valor para o que achar melhor */
+    display: block;
+    margin: 0;
+    object-fit: cover; /* Para cortar a imagem se ultrapassar altura */
 }
 
 /*Estilização do MENU*/
@@ -52,6 +64,7 @@ nav li {
 }
 
 /* Estilização da Sessão SOBRE NÓS */
+
 .sobre_nos {
     width: 60%;
     text-align: justify;
@@ -62,7 +75,7 @@ nav li {
 }
 
 .img_sobre_nos {
-    width: 40%;
+    width: 50%;
     float: left;
     margin-right: 20px;
     /* distanciando a imagem do texto */
@@ -72,30 +85,34 @@ nav li {
     clear: left;
 }
 
+
 /* ESTILIZAÇÃO DA SESSÃO NOSSO ESTABELECIMENTO */
 .mapa{
     text-align: center; 
-    background: linear-gradient(#FFFFFF, #f1e0d4);
+    /* background: linear-gradient(#FFFFFF, #f1e0d4); */
+    background: transparent;
 }
 
 /* Estilização da Sessão NOSSOS PRODUTOS */
 .nossos_produtos {
     width: 60%;
-    text-align: justify;
+    text-align: left; /* para o texto ficar alinhado normal */
     line-height: 1.5;
-    /* espaçamento entre linhas */
-    margin-left: 20%;
+    margin: 0 auto; /* centraliza bloco */
     font-family: cursive;
 }
 
-.div_nossos_produtos{
+.div_nossos_produtos {
     width: 70%;
-    margin-left: 30%;
+    margin: 0 auto; /* centraliza horizontalmente */
     display: flex;
+    justify-content: center; /* alinha os itens no centro */
+    align-items: center; /* alinha verticalmente */
+    gap: 20px; /* espaço entre texto e imagem */
 }
 
 .img_nossos_produtos{
-    width: 30%;
+    width: 40%;
     border-radius: 20px;
     box-shadow: 10px 10px 5px 0px #000000;
     opacity: 1;
@@ -124,13 +141,14 @@ nav li {
 /* SE SSÃO VIDEO */
 .video{
     text-align: center;
-    background: linear-gradient(#ffc58e, #bd835a);
+    /* background: linear-gradient(#ffc58e, #bd835a); */
+    background: transparent;
 }
 
 /* ESTILIZAÇÃO DO FOOTER */
 footer{
-    padding: 30px 10px 10px 0;
-    background: url("../img/imagem3.png");
+    padding: 10px 10px 10px 0;
+    background: url("../img/imagem8.png");
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
