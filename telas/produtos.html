@@ -5,6 +5,15 @@
         <link href="../img/favicon.ico" rel="icon" type="image/x-con">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <title>Pensar em um tema</title>
+        <script type="text/JavaScript">
+            alert('Conheça nossos produtos!');
+
+            //Função para abrir a POP-UP
+            function abrirDetalhes(nome,img,desc){
+                url=`pop_produtos.html?produto=${encodeURIComponent(nome)}&imagem=${encodeURIComponent(img)}&descricao=${encodeURIComponent(desc)}`
+                window.open(url, "_blank", "width=800,height=700")
+            }
+        </script>   
     </head>
     <body>
         <header>
@@ -26,10 +35,24 @@
             <ul class="produtos-titulo">
                 <li>Produtos</li>
             </ul>
+
+            <p class="dataAtual"><script>
+                data = new Date
+
+                //Dia da semana
+                diaSemana = new Array('Domingo','Segunda-Feira','Terça-Feira','Quarta-Feira','Quinta-Feira','Sexta-Feira','Sábado')
+
+                mes = new Array('Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro')
+
+                document.write(diaSemana[data.getDay()] + ', ' + data.getDate() + ' de ' + mes[data.getMonth()] + ' de ' + data.getFullYear())
+            </script></p>
             <!-- Exibição dos produtos -->
              <div class= "container">
-                <div class = "card">
-                    <img src="../img/produtos/produto1.jpg"/>
+                <scrip>
+                    descricao="Estes são os panos de prato bordados com passa-fita, laise, fita de cetim e gripir.\n\nEscolha a cor de sua preferência!"
+                </scrip>
+                <div class="card" onClick="abrirDetalhes('Mel','../img/produtos/produto1.jpeg',descricao)">
+                    <img src="../img/Produtos/produto1.jpg"/>
                     <h2>Mel</h2>
                     <p>Artesanal, sem conservantes</p>
                     <p class= "preco">R$ 25/cada</p>

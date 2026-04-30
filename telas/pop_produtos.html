@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link href="../img/favicon.ico" rel="icon" type="image/x-con"/>
+        <title>Pensar em um Tema</title>
+    </head>
+    <body>
+        <div>
+            <h1 id="nome-produto"></h1>
+            <img id="img-produto" src=""/>
+            <p id="desc-produto"></p>
+
+            <!--Captura os dados do produto-->
+            <script>
+                function capturaDados(dado){
+                    urlParams = new URLSearchParams(window.location.search)
+                    return urlParams.get(dado);
+                }
+
+                //Preenche o nome do produto
+                document.getElementById("nome-produto").textContent=capturaDados("produto");
+                //Preenche a imagem do produto
+                document.getElementById("img-produto").src=capturaDados("imagem");
+                //Prenche a descrição do produto
+                document.getElementById("desc-produto").textContent=capturaDados("descricao");
+            </script>
+        </div>
+    </body>
+</html>

@@ -52,3 +52,11 @@ main{
     font-weight: bold;
     color: rgb(29, 170, 123);
 }
+
+/*Estiliza a data atual*/
+.dataAtual {
+    text-align: right;
+    font-size: 24px;
+    margin-right: 20px;
+    color: navy;
+}
