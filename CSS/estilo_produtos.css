@@ -52,3 +52,24 @@ main{
     font-weight: bold;
     color: rgb(29, 170, 123);
 }
+
+/*Estilização da POP de Detalhes*/
+.pop{
+  margin: 0;
+}
+.pop img {
+  width: 700;
+  height: 500;
+  padding-left: 7%;
+}
+.pop h1{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(78, 8, 116);
+}
+.pop p{
+  padding: 2% 0 9% 7% ;
+  margin: 0;
+  white-space: pre-line;
+}

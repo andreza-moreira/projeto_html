@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="../css/contato.css" rel="stylesheet"/>
+        <link href="../css/estilo_produtos.css" rel="stylesheet"/>
+        <link href="../css/estilo.css" rel="stylesheet"/>
+        <link rel="icon" href="../img/plantar.png" type="image/png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <title>Nosso Contato</title>
+    </head>
+    <body>
+
+        <header>
+            <div class="divHeader">
+                <img src="../img/logo.png" class="logo"/>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contatos.html" class="pagina-atual">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <ul class="contatos-titulo">
+                <li class="contatos-item">Contatos</li>
+            </ul>
+            <div id="formRetorno" class="divRetorno">
+                <p id="textoRetorno" class="texto-contatos"></p>    
+            </div>
+            <div id="formulario">
+                <p class="texto-contatos">
+                    Será uma alegria te atender!
+                    <br><br>
+                    Você pode nos encontrar no Instagram, WhatsApp ou preencher o formulário abaixo.
+                </p>
+                
+                <form id="frmContato">
+                    <fieldset>
+                        <legend>Dados Pessoais</legend>
+                        
+                        <label>* Nome e sobrenome</label>
+                        <input type="text" id="nomesobrenome" name="" class="input-padrao" required>
+
+                        <label>E-mail</label>
+                        <input type="email" id="email" name="" class="input-padrao" placeholder="seuemail@dominio.com">
+
+                        <label>Telefone</label>
+                        <input type="tel" id="telefone" name="" class="input-padrao" placeholder="(XX) XXXXX-XXXX">
+
+                        <label>* Mensagem</label>
+                        <textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea>
+
+                        <label>Como prefere o nosso contato?
+                            <input type="radio" value="radio-mail" name="Contato"> E-mail
+                            <input type="radio" value="radio-telefone" name="Contato"> Telefone
+                            <input type="radio" value="radio-whatsapp" name="Contato"> Whatsapp
+                        </label>
+
+                        <br><br>
+                        <label>Qual o motivo do seu contato?
+                            <select>
+                                <option>Selecione</option>
+                                <option>Dúvida</option>
+                                <option>Sugestão</option>
+                                <option>Elogio</option>
+                                <option>Reclamação</option>
+                            </select>
+                        </label>
+                        <br><br>
+
+                        <button type="submit" id="enviar" class="enviar">Enviar Formulário</button>
+                    </fieldset>
+                </form> 
+            </div>
+        </main>
+
+        <footer>
+             <img src="../img/logo.png" class="logo_footer">
+             <p>
+                Encomendas on-line: 
+                <a href="https://wa.me/5511961613389" target="_blank">
+                    <i class="fa fa-whatsapp"></i> (11) 961613389
+                </a>
+                <a href="https://instagram.com/produtosnaturais_" target="_blank">
+                    <i class="fa fa-instagram"></i> @produtosnaturais_  
+                </a>  
+             </p>
+        </footer> 
+
+        <script src="../js/form.js"></script>  
+    </body>
+</html>

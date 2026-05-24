@@ -2,9 +2,23 @@
     <head>
         <link href="../css/estilo.css" rel="stylesheet"/>
         <link href="../css/estilo_produtos.css" rel="stylesheet"/>
-        <link href="../img/favicon.ico" rel="icon" type="image/x-con">
+        <link rel="icon" href="../img/plantar.png" type="image/png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <title>Pensar em um tema</title>
+        <title>Nossos Produtos</title>
+        <script>
+            alert('Conheça nossa linha de produtos!')
+
+            dia = new Array ("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado")
+            mes = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+            data = new Date
+
+            function abrirDetalhes(nome, imagem, descricao) {
+            const url = `pop_produtos.html?nome=${encodeURIComponent(nome)}&imagem=${encodeURIComponent(imagem)}&descricao=${encodeURIComponent(descricao)}`;
+            window.open(url, '_blank', "width=800,height=700");
+            }
+    
+        </script>
+
     </head>
     <body>
         <header>
@@ -12,11 +26,10 @@
                 <img src="../img/logo.png" class="logo"/>
                 <!--Barra de navegação-->
                 <nav>
-                    <!--Lista de itens do menu-->
                     <ul>
                         <li><a href="../index.html">Home</a></li>
-                        <li>Produtos</li>
-                        <li>Contato</li>
+                        <li><a href="produtos.html" class="pagina-atual">Produtos</a></li>
+                        <li><a href="contatos.html">Contato</a></li>
                     </ul>
                 </nav>
             </div>
@@ -26,47 +39,78 @@
             <ul class="produtos-titulo">
                 <li>Produtos</li>
             </ul>
+            <p style="text-align: right; margin-right: 10px;">
+                <script type="text/javascript">
+                    document.write (dia[data.getDay()] + ", " + data.getDate() + " de " + mes[data.getMonth()] + " de " + data.getFullYear())
+                </script>
+            </p>
             <!-- Exibição dos produtos -->
              <div class= "container">
-                <div class = "card">
+                <script>
+                    // Produto: Mel
+                    desc_produto="Descubra a doçura em sua forma mais autêntica. O nosso mel é 100% natural, cru e extraído de forma sustentável, preservando todas as propriedades que as abelhas e a natureza levaram tempo para criar. Sem adição de açúcares, conservantes ou corantes — apenas a pureza da colmeia direto para a sua mesa."
+                    slider=['../img/produtos/poster_mel.jpg','../img/produtos/produto1.jpg'];
+                    
+                    // Produto: Chá Verde
+                    desc_produto_cha="Descubra o frescor em sua forma mais autêntica. O nosso chá verde é 100% natural, colhido à mão e produzido de forma sustentável, preservando todos os antioxidantes e nutrientes que a natureza levou tempo para criar. Sem adição de aromas artificiais, conservantes ou corantes — apenas a pureza das folhas direto para a sua xícara."
+                    slider_cha=['../img/produtos/poster_cha.jpg', '../img/produtos/produto2.jpg'];
+
+                    // Produto: Castanha
+                    desc_produto_castanha="Descubra a crocância em sua forma mais autêntica. As nossas castanhas são 100% naturais, selecionadas manualmente e originadas de manejo sustentável, preservando todos os nutrientes e o sabor rico que a floresta levou tempo para criar. Sem adição de óleos, conservantes ou componentes artificiais — apenas a pureza e a energia da natureza direto para o seu dia a dia."
+                    slider_castanha=['../img/produtos/poster_castanha.jpg', '../img/produtos/produto3.jpg'];
+
+                    // Produto: Óleo de Lavanda
+                    desc_produto_lavanda="Descubra o relaxamento em sua forma mais autêntica. O nosso óleo de lavanda é 100% natural, destilado com cuidado e extraído de forma sustentável, preservando todas as propriedades calmantes e aromáticas que a natureza levou tempo para criar. Sem adição de fragrâncias sintéticas, conservantes ou corantes — apenas a pureza do campo direto para o seu bem-estar."
+                    slider_lavanda=['../img/produtos/poster_lavanda.jpg', '../img/produtos/produto4.jpg'];
+
+                    // Produto: Óleo de Coco
+                    desc_produto_coco="Descubra a nutrição em sua forma mais autêntica. O nosso óleo de coco é 100% natural, prensado a frio e extraído de forma sustentável, preservando todos os ácidos graxos e vitaminas que a natureza levou tempo para criar. Sem adição de produtos químicos, conservantes ou hidrogenação — apenas a pureza do coco direto para a sua rotina."
+                    slider_coco=['../img/produtos/poster_coco.jpg', '../img/produtos/produto5.jpg'];
+
+                    // Produto: Óleo Essencial de Limão Siciliano
+                    desc_produto_limao="Descubra a energia cítrica em sua forma mais autêntica. O nosso óleo essencial de limão siciliano é 100% natural, extraído por prensagem a frio de frutos cultivados de forma sustentável, preservando todo o aroma revigorante e a pureza que a natureza levou tempo para criar. Sem adição de diluentes, conservantes ou essências artificiais — apenas o frescor vibrante direto para o seu ambiente."
+                    slider_limao=['../img/produtos/poster_limao.jpg', '../img/produtos/produto6.jpg'];
+                </script>
+
+                <div class = "card" onclick="abrirDetalhes('Mel', slider, desc_produto)">
                     <img src="../img/produtos/produto1.jpg"/>
                     <h2>Mel</h2>
                     <p>Artesanal, sem conservantes</p>
                     <p class= "preco">R$ 25/cada</p>
                 </div>
 
-                <div class = "card">
+                <div class = "card" onclick="abrirDetalhes('Chá Verde', slider_cha, desc_produto_cha)">
                     <img src="../img/produtos/produto2.jpg"/>
                     <h2>Chá Verde</h2>
-                    <p>Chá sem conservantes</p>
+                    <p>Artesanal, sem conservantes</p>
                     <p class= "preco">R$ 25/cada</p>
                 </div>
 
-                <div class ="card">
+                <div class = "card" onclick="abrirDetalhes('Castanha', slider_castanha, desc_produto_castanha)">
                     <img src="../img/produtos/produto3.jpg"/>
                     <h2>Castanha</h2>
-                    <p>Castanha do Pará</p>
+                    <p>Artesanal, sem conservantes</p>
                     <p class= "preco">R$ 30/cada</p>
                 </div>
 
-                <div class ="card">
+                <div class = "card" onclick="abrirDetalhes('Óleo de Lavanda', slider_lavanda, desc_produto_lavanda)">
                     <img src="../img/produtos/produto4.jpg"/>
                     <h2>Óleo de Lavanda</h2>
-                    <p>óleo 100% Natural</p>
+                    <p>Artesanal, sem conservantes</p>
                     <p class= "preco">R$ 20/cada</p>
                 </div>
 
-                <div class ="card">
+                <div class = "card" onclick="abrirDetalhes('Óleo de Coco', slider_coco, desc_produto_coco)">
                     <img src="../img/produtos/produto5.jpg"/>
-                    <h2>Óleo de Côco</h2>
-                    <p>100% natural</p>
+                    <h2>Óleo de Coco</h2>
+                    <p>Artesanal, sem conservantes</p>
                     <p class= "preco">R$ 20/cada</p>
                 </div>
 
-                <div class ="card">
+                <div class = "card" onclick="abrirDetalhes('Óleo Essencial de Limão Siciliano', slider_limao, desc_produto_limao)">
                     <img src="../img/produtos/produto6.jpg"/>
                     <h2>Óleo Essencial de Limão Siciliano</h2>
-                    <p>100% Natural</p>
+                    <p>Artesanal, sem conservantes</p>
                     <p class= "preco">R$ 20/cada</p>
                 </div>
 
@@ -78,7 +122,7 @@
             <p>
                 Encomendas on-line: 
                 <a href="https://wa.me/5511961613389" target="_blank"><i class="fa fa-whatsapp"></i> (11) 96161-3389</a> | 
-                <a href="https://instagram.com/silfazendoarte_" target="_blank"><i class="fa fa-instagram"></i> @silfazendoarte_</a>
+                <a href="https://instagram.com/produtosnaturais_" target="_blank"><i class="fa fa-instagram"></i> @produtosnaturais_</a>
             </p>
         </footer>
     </body>
